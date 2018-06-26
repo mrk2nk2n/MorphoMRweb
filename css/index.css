@@ -478,8 +478,8 @@ body, html {
         height: 7.8rem;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
-        border-left: 7rem solid rgba(0,0,0,.7);
-        border-right: 7rem solid rgba(0,0,0,.7);
+        border-left: 15rem solid rgba(0,0,0,.7);
+        border-right: 15rem solid rgba(0,0,0,.7);
         border-bottom: 10rem solid rgba(0,0,0,.7);
         top: 16%
     }
