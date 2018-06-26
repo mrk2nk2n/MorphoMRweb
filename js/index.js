@@ -8413,7 +8413,7 @@ this.createjs = this.createjs || {},
                         var e = $("#preload"),
                             t = $("#progress"),
                             n = $(".container"),
-                            r = "img/" + this.oid + ".png",
+                            r = "img/" + this.oid + ".jpg",
                             i = "resources/" + this.oid + ".mp4";
 
                         this.setIntroInfo(), // inserting html and src of video, intro content, intro button according to chosen chapter
@@ -8508,7 +8508,7 @@ this.createjs = this.createjs || {},
                     key: "setIntroInfo",
                     value: function () {
                         $("#myvideo").html('<source src="resources/' + this.oid + '.mp4"/>'),
-                        $(".intro .content").html('<img src="img/' + this.oid + '.png"/>'),
+                        $(".intro .content").html('<img src="img/' + this.oid + '.jpg"/>'),
                         $(".intro .introbutton").attr("href", this.urlMap[this.oid])
                     }
                 }, {
@@ -8589,8 +8589,8 @@ this.createjs = this.createjs || {},
                     ! function (e, t) {
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
                     }(this, n),
-                    this.width = 256,
-                    this.height = 512,
+                    this.width = 512,
+                    this.height = 201,
                     this.scale = 368 / this.width,
                     this.camera = e,
                     this.scene = t,

@@ -348,31 +348,64 @@ body, html {
     position: absolute;
     z-index: 20;
     background: url(../img/openanim-landscape2.jpg) no-repeat center 30% #000;
-    background-size: contain;
+    background-size: unset;
     top: 0;
     left: 0
 }
 
 #video {
     margin: 0 auto;
-    position: fixed
+    /*position: fixed*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
+
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+    #video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+/* 2. If supporting object-fit, overriding (1): */
+@supports (object-fit: cover) {
+    #video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
 .bgbg {
-    background: url() no-repeat 50%;
+    /*background: url() no-repeat 50%;
     background-size: 100%;
+    height: 3.31rem;*/
     width: 100%;
-    height: 3.31rem;
     position: absolute;
-    top: 56%
+    top: 46%
 }
 
 .open-camera {
     display: block;
     background: url(../img/btn_ar.png) no-repeat;
-    background-size: cover;
-    width: 3.38rem;
-    height: 4.47rem;
+    background-size: contain;
+    width: 5.38rem;
+    height: 1.5rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -401,7 +434,7 @@ body, html {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     background: url(../img/openanim-landscape2.jpg) no-repeat center -1rem #000;
-    background-size: contain;
+    background-size: unset;
     z-index: 10
 }
 
@@ -445,8 +478,8 @@ body, html {
         height: 7.8rem;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
-        border-left: 5rem solid rgba(0,0,0,.7);
-        border-right: 5rem solid rgba(0,0,0,.7);
+        border-left: 7rem solid rgba(0,0,0,.7);
+        border-right: 7rem solid rgba(0,0,0,.7);
         border-bottom: 10rem solid rgba(0,0,0,.7);
         top: 16%
     }
@@ -522,18 +555,19 @@ body, html {
 }
 
 .f-rbutton {
-    background: url(../img/btn_back.png) no-repeat;
-    background-size: contain;
-    width: 1.28rem;
-    height: 4.91rem;
-    right: .3rem;
-    top: .4rem;
-    z-index: 20
+    width: 100%;
+    height: 1.5rem;
+    z-index: 20;
+    background-color:white
 }
 
     .f-rbutton a {
-        width: .81rem;
-        height: 2.24rem
+        width: 20%;
+        height: 100%;
+        background: url(../img/btn_back.png) no-repeat;
+        background-size: contain;
+        margin: auto;
+        margin-top: 1%
     }
 
     .f-rbutton a, .introPage .f-rbutton, .introPage .intromask {
@@ -543,17 +577,16 @@ body, html {
 .intro {
     position: absolute;
     z-index: 10;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    display: none
+    height: auto;
+    display: none;
+    background-color: white
 }
 
     .intro .content {
-        width: 5.05rem;
-        margin-left: .44rem;
-        margin-top: .7rem
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 15vh
     }
 
         .intro .content img {
@@ -561,11 +594,11 @@ body, html {
         }
 
 .progress {
-    width: 5.85rem;
-    height: .54rem;
+    width: 7.85rem;
+    height: 1.54rem;
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 40%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     background: url(../img/progress.png) no-repeat 50%;
@@ -574,7 +607,7 @@ body, html {
 
     .progress .progress-inner {
         width: 0;
-        height: .54rem;
+        height: 1.54rem;
         background: url(../img/progress1.png) no-repeat;
         background-size: 100% 100%
     }
