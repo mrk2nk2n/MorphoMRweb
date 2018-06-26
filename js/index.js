@@ -8445,8 +8445,6 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
-                            src: "img/button.png"
-                        }, {
                             src: i // video of chosen chapter
                         }, {
                             src: r // intro of chosen chapter
