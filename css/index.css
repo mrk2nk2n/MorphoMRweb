@@ -345,7 +345,6 @@ body, html {
 }
 
 .preload {
-    position: unset;
     top: 0;
     right: 0;
     bottom: 0;
@@ -536,7 +535,7 @@ body, html {
 
     .f-rbutton a {
         width: 20%;
-        height: 17vh;
+        height: 15vh;
         background: url(../img/btn_back.png) no-repeat;
         background-size: contain;
         margin: auto;
