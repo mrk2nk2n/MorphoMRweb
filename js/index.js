@@ -8435,7 +8435,13 @@ this.createjs = this.createjs || {},
                         this.preload.loadManifest([{ // list of items in the manifest that needs to be preloaded
                             src: "img/scan.gif"
                         }, {
-                            src: "img/button.gif"
+                            src: "img/btn_ar.png"
+                        }, {
+                            src: "img/btn_ready.png"
+                        }, {
+                            src: "img/btn_more.png"
+                        }, {
+                            src: "img/btn_back.png"
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
