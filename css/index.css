@@ -529,18 +529,18 @@ body, html {
 
 .f-rbutton {
     width: 100%;
-    height: 1.5rem;
+    height: 20vh;
     z-index: 20;
     background-color:white
 }
 
     .f-rbutton a {
         width: 20%;
-        height: 100%;
+        height: 17vh;
         background: url(../img/btn_back.png) no-repeat;
         background-size: contain;
         margin: auto;
-        margin-top: 1%
+        margin-top: 3vh
     }
 
     .f-rbutton a, .introPage .f-rbutton, .introPage .intromask {
