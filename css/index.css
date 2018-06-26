@@ -348,7 +348,6 @@ body, html {
     position: absolute;
     z-index: 20;
     background: url(../img/openanim-landscape2.jpg) no-repeat center 30% #000;
-    background-size: unset;
     top: 0;
     left: 0
 }
@@ -430,35 +429,7 @@ body, html {
 }
 
 .openPanel {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
     background: url(../img/openanim-landscape2.jpg) no-repeat center -1rem #000;
-    background-size: unset;
-    z-index: 10
-}
-
-    .openPanel .light {
-        width: 7.2rem;
-        height: 6.83rem;
-        background: url() no-repeat top;
-        background-size: 100% 100%;
-        top: -1rem
-    }
-
-    .company, .openPanel .light {
-        position: absolute;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%)
-    }
-
-.company {
-    bottom: 5%;
-    background: url() no-repeat;
-    background-size: contain;
-    width: 6.21rem;
-    height: .26rem
 }
 
 .scan-panel {
@@ -611,14 +582,3 @@ body, html {
         background: url(../img/progress1.png) no-repeat;
         background-size: 100% 100%
     }
-
-.kqz {
-    position: absolute;
-    left: 50%;
-    top: 75%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background: url(../img/kaiqi.png) no-repeat 50%;
-    background-size: 100% 100%;
-    width: 1.1rem;
-    height: .29rem
