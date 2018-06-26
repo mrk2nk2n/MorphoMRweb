@@ -8371,6 +8371,7 @@ this.createjs = this.createjs || {},
                     this.preload = new createjs.LoadQueue(!1),
                     this.startPanel = $(".openPanel"),
                     this.scanPanel = $(".scan-panel"),
+                    this.posterPanel = $(".poster-panel"),
                     this.btnOpenCamera = $("#openCamera"),
                     this.video = $("#video")[0],
                     this.scanButon = $(".scan-button"),
@@ -8441,6 +8442,8 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/btn_more.png"
                         }, {
+                            src: "img/renyu-poster.png"
+                        }, {
                             src: "img/btn_back.png"
                         }, {
                             src: "img/openanim-landscape2.jpg"
@@ -8479,12 +8482,16 @@ this.createjs = this.createjs || {},
                                 n.app.getVideo().show(e, t), // returns the video material
                                 n.scan() // show demo video display
                             }
-                        }), this.scanButon.on("click", function () { // when button on scanning page is clicked
+                        }), this.scanButon.on("click", function () { // when button on scanning page is clicked                          
                             var e = $(".scan-boder").offset().top,
                                 t = $(".scan-boder").height();
-
-                            n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
+                                                            
                             n.scan() // show demo video display
+                            
+                            window.setTimeout(function () { // wait for two seconds                     
+                                n.posterPanel.hide(),
+                                n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
+                            }, 1000)
 
                         }), this.moreButton.on("click", function () {
                             n.videoPanel.hide(),
@@ -8526,6 +8533,7 @@ this.createjs = this.createjs || {},
                     value: function () {
                         this.moreButton.show(),
                         this.scanPanel.hide(),
+                        this.posterPanel.show(),
                         this.videoPanel.show(),
                         $("html").removeClass("introPage"),
                         this.myvideo[0].removeEventListener("playing", this.onVideoPlaying),
