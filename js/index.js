@@ -8433,8 +8433,8 @@ this.createjs = this.createjs || {},
                         this.preload.on("progress", function () { // update progress of preloading
                             var e = Math.floor(100 * this.preload.progress);
                             $("div", t).css("width", e + "%")
-                        }, this),
-                        
+                        }, this),                       
+
                         this.preload.loadManifest([{ // list of items in the manifest that needs to be preloaded
                             src: "img/scan.gif"
                         }, {
