@@ -8379,6 +8379,8 @@ this.createjs = this.createjs || {},
                     this.moreButton = $(".more-button"), 
                     this.videoPanel = $(".video-panel"), 
                     this.returnVideo = $(".returnVideo"), 
+                    this.bgAudioMp3 = $("#bg-audio-mp3"),
+                    this.bgAudioOgg = $("#bg-audio-ogg")
                     this.deviceId,
                     this.supportVideo = !0, 
                     this.app = new o.default, // farmerapp.js threejs renderer and controls
@@ -8448,10 +8450,6 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
-                            src: "resources/renyu-bg-mp3.mp3"
-                        }, {
-                            src: "resources/renyu-bg-ogg.ogg"
-                        }, {
                             src: i // video of chosen chapter
                         }, {
                             src: r // intro of chosen chapter
@@ -8504,7 +8502,9 @@ this.createjs = this.createjs || {},
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].pause()
+                            n.myvideo[0].pause(),
+                            n.bgAudioMp3[0].play(),
+                            n.bgAudioOgg[0].play()
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
