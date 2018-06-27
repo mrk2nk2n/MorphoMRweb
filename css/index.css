@@ -308,7 +308,7 @@ body, html {
     background: #000
 }
 
-    html.introPage, html.introPage body, html.scrollPanel, html.scrollPanel body {
+    html.introPage, html.introPage body, html.scrollPage, html.scrollPage body {
         overflow: auto;
         overflow-x: hidden
     }
@@ -539,7 +539,7 @@ body, html {
     }
 
 .intromask {
-    background: rgba(0,0,0,.7);
+    background-color: white;
     width: 100%;
     height: 100%
 }
@@ -569,6 +569,35 @@ body, html {
         display: block
     }
 
+.scrollPanel {
+    width: 100%;
+    height: 150%;
+    z-index: 20;
+    background-color: white;
+    position: fixed;
+    display: none
+}
+
+.scrollPage .scrollPanel {
+    display: block
+}
+
+.scroll {
+    position: absolute;
+    z-index: 101;
+    background-color: white;
+    width: 100%;
+    height: 120%
+}
+
+    .scroll .scrollTip {
+
+    }
+
+        .scroll .scrollTip img {
+
+        }
+
 .intro {
     position: absolute;
     z-index: 10;
@@ -585,25 +614,6 @@ body, html {
     }
 
         .intro .content img {
-            width: 100%
-        }
-
-.scrollPanel {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: auto;
-    display: none;
-    background-color: white
-}
-
-    .scrollPanel .scrollTip {
-        width: 50%;
-        margin-left: 25%;
-        margin-top: 20vh
-    }
-
-        .scrollPanel .scrollTip img {
             width: 100%
         }
 

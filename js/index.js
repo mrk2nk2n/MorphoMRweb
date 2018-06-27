@@ -8430,9 +8430,9 @@ this.createjs = this.createjs || {},
                             setTimeout(function () {
                                 e.hide() // hide preload bar on preloading complete
                                 n.show() // show main container that contains all the content   
-
-                                $(".intro").show()
-                                $("html").addClass("introPage")
+                                
+                                $(".scroll").show()
+                                $("html").addClass("scrollPage")
                             }, 200)
                         }, this),                    
                         
@@ -8540,7 +8540,8 @@ this.createjs = this.createjs || {},
                     value: function () {
                         $("#myvideo").html('<source src="resources/' + this.oid + '.mp4"/>'),
                         $(".intro .content").html('<img src="img/' + this.oid + '.jpg"/>'),
-                        $(".intro .introbutton").attr("href", this.urlMap[this.oid])
+                        $(".intro .introbutton").attr("href", this.urlMap[this.oid]),
+                        $(".scroll .scrollTip").html('<img src="img/scrollTipPNG.png"/>')
                     }
                 }, {
                     key: "fail",
