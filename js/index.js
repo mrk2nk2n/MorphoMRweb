@@ -8491,12 +8491,14 @@ this.createjs = this.createjs || {},
                                                             
                             n.scan(); // show demo video display
 
-                            n.voiceoverAudio.play()
+                            n.voiceoverAudio[0].play()
                             console.log("voiceoverAudio played")
 
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
-                                n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
+                                n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
+                                n.voiceoverAudio[0].play(),
+                                console.log("voiceoverAudio played")
                             }, 1000)
 
                         }), this.moreButton.on("click", function () {
