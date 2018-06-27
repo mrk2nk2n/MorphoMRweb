@@ -1,4 +1,4 @@
-// JavaScript source code
+﻿// JavaScript source code
 
 
 ! function (e, t) {
@@ -8486,19 +8486,19 @@ this.createjs = this.createjs || {},
                             var e = $(".scan-boder").offset().top,
                                 t = $(".scan-boder").height();
                                                             
-                            n.scan(); // show demo video display
-
+                            n.scan() // show demo video display
+                            
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
-                            }, 1000);
+                            }, 1000)
 
                         }), this.moreButton.on("click", function () {
                             n.videoPanel.hide(),
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].pause();
+                            n.myvideo[0].pause()
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
@@ -8534,14 +8534,13 @@ this.createjs = this.createjs || {},
                         this.moreButton.show(),
                         this.scanPanel.hide(),
                         this.posterPanel.show(),
-                        console.log("poster panel showing")
                         this.videoPanel.show(),
                         $("html").removeClass("introPage"),
                         this.myvideo[0].removeEventListener("playing", this.onVideoPlaying),
                         this.myvideo[0].play(),
                         this.videoPanel.css("background", "none"),
                         console.log("started lf app!")
-                   }
+                    }
                 }, {
                     key: "openCamera",
                     value: function () {
