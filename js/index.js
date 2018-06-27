@@ -8505,6 +8505,7 @@ this.createjs = this.createjs || {},
                             $("html").addClass("introPage"),
                             n.myvideo[0].pause(),
                             n.voiceoverAudio[0].pause(),
+                            n.voiceoverAudio[0].currentTime = 0,
                             console.log("voiceoverAudio paused");
 
                         }), this.returnVideo.on("click", function () {
