@@ -8491,14 +8491,14 @@ this.createjs = this.createjs || {},
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
-                            }, 1000)
+                            }, 1000);
 
                         }), this.moreButton.on("click", function () {
                             n.videoPanel.hide(),
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].pause()
+                            n.myvideo[0].pause();
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
