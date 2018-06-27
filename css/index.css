@@ -245,8 +245,8 @@ canvas {
 }
 
 .lock-bg {
-    width: 4.02rem;
-    height: 4.38rem;
+    width: 8.02rem;
+    height: 8.38rem;
     background: url(../img/lock.png) 0 0 no-repeat;
     background-size: contain
 }
