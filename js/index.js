@@ -8504,8 +8504,8 @@ this.createjs = this.createjs || {},
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
                             n.myvideo[0].pause(),
-                            n.voiceoverAudio[0].pause()
-                            console.log("voiceoverAudio paused")
+                            n.voiceoverAudio[0].pause(),
+                            console.log("voiceoverAudio paused");
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
