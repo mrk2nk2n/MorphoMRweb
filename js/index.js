@@ -8431,8 +8431,8 @@ this.createjs = this.createjs || {},
                                 e.hide() // hide preload bar on preloading complete
                                 n.show() // show main container that contains all the content   
                                 
-                                $(".scroll").show()
-                                $("html").addClass("scrollPage")
+                                //$(".scroll").show()
+                                //$("html").addClass("scrollPage")
                             }, 200)
                         }, this),                    
                         
