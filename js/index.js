@@ -8502,8 +8502,8 @@ this.createjs = this.createjs || {},
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].currentTime = 0,
                             n.myvideo[0].pause(),
+                            n.myvideo[0].currentTime = 0,
                             n.bgAudioMp3[0].play(),
                             n.bgAudioOgg[0].play()
 
