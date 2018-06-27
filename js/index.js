@@ -8365,10 +8365,13 @@ this.createjs = this.createjs || {},
                     this.isAndroid = /android/i.test(e),
                     this.isIphone = /(iPhone|iPad|iPod|iOS)/i.test(e),
                     this.isWeChat = /MicroMessenger/i.test(e), 
+                    this.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent),
                     this.iosversion = e.match(/os\s+(\d+)/i) || !1,
                     this.winHeight = window.innerHeight,
                     this.webAR = new i.default,
                     this.preload = new createjs.LoadQueue(!1),
+                    this.bodyElement = $("#body"),
+                    this.scrollPanel = $(".scrollPanel"),
                     this.startPanel = $(".openPanel"),
                     this.scanPanel = $(".scan-panel"),
                     this.posterPanel = $(".poster-panel"),
@@ -8425,8 +8428,11 @@ this.createjs = this.createjs || {},
 
                         this.preload.on("complete", function () {
                             setTimeout(function () {
-                                e.hide(), // hide preload bar on preloading complete
-                                n.show() // show main container that contains all the content
+                                e.hide() // hide preload bar on preloading complete
+                                n.show() // show main container that contains all the content   
+
+                                $(".intro").show()
+                                $("html").addClass("introPage")
                             }, 200)
                         }, this),                    
                         
@@ -8465,6 +8471,13 @@ this.createjs = this.createjs || {},
                         }).catch(function (e) {
                             t.fail()
                         })
+                    }
+                }, {
+                    key: "handleSafariScroll",
+                    value: function () {
+                        this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser"),
+                        $(".scrollPanel").show(),
+                        $("html").addClass("scrollPanel")
                     }
                 }, {
                     key: "bindEvent", // event that start displaying the camera feed
