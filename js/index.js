@@ -8449,8 +8449,6 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
-                            src: "resources/renyu-ch1-cut-mp3.mp3"
-                        }, {
                             src: i // video of chosen chapter
                         }, {
                             src: r // intro of chosen chapter
@@ -8494,8 +8492,8 @@ this.createjs = this.createjs || {},
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
-                                n.voiceoverAudio[0].play(),
-                                console.log("voiceoverAudio played")
+                                //n.voiceoverAudio[0].play(),
+                                //console.log("voiceoverAudio played")
                             }, 1000)
 
                         }), this.moreButton.on("click", function () {
@@ -8503,10 +8501,10 @@ this.createjs = this.createjs || {},
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].pause(),
-                            n.voiceoverAudio[0].pause(),
-                            n.voiceoverAudio[0].currentTime = 0,
-                            console.log("voiceoverAudio paused");
+                            n.myvideo[0].pause()
+                            //n.voiceoverAudio[0].pause(),
+                            //n.voiceoverAudio[0].currentTime = 0,
+                            //console.log("voiceoverAudio paused");
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
