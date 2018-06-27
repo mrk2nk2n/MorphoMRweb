@@ -8493,7 +8493,6 @@ this.createjs = this.createjs || {},
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
-                                n.myvideo[0].currentTime = 0,
                                 n.myvideo[0].play()
                             }, 1000)
 
@@ -8502,6 +8501,7 @@ this.createjs = this.createjs || {},
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
+                            n.myvideo[0].currentTime = 0,
                             n.myvideo[0].pause(),
                             n.bgAudioMp3[0].play(),
                             n.bgAudioOgg[0].play()
