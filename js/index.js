@@ -8372,6 +8372,7 @@ this.createjs = this.createjs || {},
                     this.startPanel = $(".openPanel"),
                     this.scanPanel = $(".scan-panel"),
                     this.posterPanel = $(".poster-panel"),
+                    this.voiceoverAudio = $("#voiceover-audio-mp3"),
                     this.btnOpenCamera = $("#openCamera"),
                     this.video = $("#video")[0],
                     this.scanButon = $(".scan-button"),
@@ -8448,6 +8449,8 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
+                            src: ""
+                        }, {
                             src: i // video of chosen chapter
                         }, {
                             src: r // intro of chosen chapter
@@ -8486,8 +8489,11 @@ this.createjs = this.createjs || {},
                             var e = $(".scan-boder").offset().top,
                                 t = $(".scan-boder").height();
                                                             
-                            n.scan() // show demo video display
-                            
+                            n.scan(); // show demo video display
+
+                            n.voiceoverAudio.play();
+                            console.log("voiceoverAudio played");
+
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
@@ -8534,13 +8540,14 @@ this.createjs = this.createjs || {},
                         this.moreButton.show(),
                         this.scanPanel.hide(),
                         this.posterPanel.show(),
+                        console.log("poster panel showing")
                         this.videoPanel.show(),
                         $("html").removeClass("introPage"),
                         this.myvideo[0].removeEventListener("playing", this.onVideoPlaying),
                         this.myvideo[0].play(),
                         this.videoPanel.css("background", "none"),
                         console.log("started lf app!")
-                    }
+                   }
                 }, {
                     key: "openCamera",
                     value: function () {
