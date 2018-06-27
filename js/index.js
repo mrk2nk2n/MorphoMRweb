@@ -8449,7 +8449,7 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
-                            src: ""
+                            src: "resources/renyu-ch1-cut-mp3.mp3"
                         }, {
                             src: i // video of chosen chapter
                         }, {
@@ -8491,8 +8491,8 @@ this.createjs = this.createjs || {},
                                                             
                             n.scan(); // show demo video display
 
-                            n.voiceoverAudio.play();
-                            console.log("voiceoverAudio played");
+                            n.voiceoverAudio.play()
+                            console.log("voiceoverAudio played")
 
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
