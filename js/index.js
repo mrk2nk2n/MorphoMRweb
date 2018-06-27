@@ -8448,6 +8448,10 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
+                            src: "resources/renyu-bg-mp3.mp3"
+                        }, {
+                            src: "resources/renyu-bg-ogg.ogg"
+                        }, {
                             src: i // video of chosen chapter
                         }, {
                             src: r // intro of chosen chapter
