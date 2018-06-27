@@ -8372,7 +8372,6 @@ this.createjs = this.createjs || {},
                     this.startPanel = $(".openPanel"),
                     this.scanPanel = $(".scan-panel"),
                     this.posterPanel = $(".poster-panel"),
-                    this.voiceoverAudio = $("#voiceover-audio-mp3"),
                     this.btnOpenCamera = $("#openCamera"),
                     this.video = $("#video")[0],
                     this.scanButon = $(".scan-button"),
@@ -8492,8 +8491,7 @@ this.createjs = this.createjs || {},
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
-                                //n.voiceoverAudio[0].play(),
-                                //console.log("voiceoverAudio played")
+
                             }, 1000)
 
                         }), this.moreButton.on("click", function () {
@@ -8502,9 +8500,6 @@ this.createjs = this.createjs || {},
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
                             n.myvideo[0].pause()
-                            //n.voiceoverAudio[0].pause(),
-                            //n.voiceoverAudio[0].currentTime = 0,
-                            //console.log("voiceoverAudio paused");
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
