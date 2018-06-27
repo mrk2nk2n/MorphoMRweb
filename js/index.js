@@ -8503,7 +8503,8 @@ this.createjs = this.createjs || {},
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].pause()
+                            n.myvideo[0].pause(),
+                            n.voiceoverAudio[0].pause()
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
