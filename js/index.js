@@ -1,4 +1,4 @@
-﻿// JavaScript source code
+// JavaScript source code
 
 
 ! function (e, t) {
@@ -8372,6 +8372,7 @@ this.createjs = this.createjs || {},
                     this.startPanel = $(".openPanel"),
                     this.scanPanel = $(".scan-panel"),
                     this.posterPanel = $(".poster-panel"),
+                    this.voiceoverAudio = $("#voiceover-audio-mp3"),
                     this.btnOpenCamera = $("#openCamera"),
                     this.video = $("#video")[0],
                     this.scanButon = $(".scan-button"),
@@ -8448,6 +8449,8 @@ this.createjs = this.createjs || {},
                         }, {
                             src: "img/openanim-landscape2.jpg"
                         }, {
+                            src: "resources/renyu-ch1-cut-mp3.mp3"
+                        }, {
                             src: i // video of chosen chapter
                         }, {
                             src: r // intro of chosen chapter
@@ -8486,11 +8489,13 @@ this.createjs = this.createjs || {},
                             var e = $(".scan-boder").offset().top,
                                 t = $(".scan-boder").height();
                                                             
-                            n.scan() // show demo video display
-                            
+                            n.scan(); // show demo video display
+
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
-                                n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
+                                n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
+                                n.voiceoverAudio[0].play(),
+                                console.log("voiceoverAudio played")
                             }, 1000)
 
                         }), this.moreButton.on("click", function () {
@@ -8498,7 +8503,10 @@ this.createjs = this.createjs || {},
                             n.introPanel.show(),
                             n.app.getVideo().hide(),
                             $("html").addClass("introPage"),
-                            n.myvideo[0].pause()
+                            n.myvideo[0].pause(),
+                            n.voiceoverAudio[0].pause(),
+                            n.voiceoverAudio[0].currentTime = 0,
+                            console.log("voiceoverAudio paused");
 
                         }), this.returnVideo.on("click", function () {
                             if (n.supportVideo) {
@@ -8534,13 +8542,14 @@ this.createjs = this.createjs || {},
                         this.moreButton.show(),
                         this.scanPanel.hide(),
                         this.posterPanel.show(),
+                        console.log("poster panel showing")
                         this.videoPanel.show(),
                         $("html").removeClass("introPage"),
                         this.myvideo[0].removeEventListener("playing", this.onVideoPlaying),
                         this.myvideo[0].play(),
                         this.videoPanel.css("background", "none"),
                         console.log("started lf app!")
-                    }
+                   }
                 }, {
                     key: "openCamera",
                     value: function () {
