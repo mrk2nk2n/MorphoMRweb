@@ -8488,8 +8488,9 @@ this.createjs = this.createjs || {},
                     key: "getWindowSize",
                     value: function () {
                         var t = $(window).height(),
-                            n = $(window).width();
-                        alert("windowHeight: " + t + " windowWidth: " + n);
+                            n = $(window).width(),
+                            o = $(window).outerHeight();
+                        alert("windowHeight: " + t + " windowWidth: " + n + " windowOuterHeight " + o);
                     }
                 }, {
                     key: "bindEvent", // event that start displaying the camera feed
