@@ -8397,7 +8397,7 @@ this.createjs = this.createjs || {},
                         1: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml",
                         2: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml"
                     }, this.handleSafariCheck(),
-                    this.getWindowSize(),
+                    //this.getWindowSize(),
                     this.preloader(), 
                     this.checkCamera(), 
                     this.bindEvent(),
@@ -8473,7 +8473,7 @@ this.createjs = this.createjs || {},
                 }, {
                     key: "handleSafariCheck",
                     value: function () {
-                        this.isSafari && this.isIphone ? this.resizeSafariBrowser() : alert ("this is not safari browser");
+                        this.isSafari && this.isIphone ? this.resizeSafariBrowser() : console.log("this is not safari browser");
                     }
                 }, {
                     key: "resizeSafariBrowser",
@@ -8525,13 +8525,12 @@ this.createjs = this.createjs || {},
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.myvideo[0].play(),
-                                n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
-                                n.getWindowSize()
+                                n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
                             }, 1000)
 
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.moreButton.show()
-                            }, 8000)
+                            }, 5000)
 
                         }), this.moreButton.on("click", function () {
                             n.videoPanel.hide(),
