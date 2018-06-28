@@ -452,7 +452,7 @@ container.safariBottomOffset {
     .scan-panel .scan-boder {
         background: url(../img/scan.gif) no-repeat;
         background-size: 100% 100%;
-        width: 9.6rem;
+        width: 40vw;
         height: 55%;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
