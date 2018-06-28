@@ -308,7 +308,7 @@ body, html {
     background: #000
 }
 
-    html.introPage, html.introPage body, html.scrollPage, html.scrollPage body {
+    html.introPage, html.introPage body {
         overflow: auto;
         overflow-x: hidden
     }
@@ -341,7 +341,10 @@ body, html {
 
 .container {
     width: 100%;
-    height: 93%;
+    height: 93%
+}
+
+.safariBottomOffset {
     margin-bottom: 7%
 }
 
@@ -449,7 +452,7 @@ body, html {
         background: url(../img/scan.gif) no-repeat;
         background-size: 100% 100%;
         width: 9.6rem;
-        height: 7.8rem;
+        height: 60vh;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
         border-left: 15rem solid rgba(0,0,0,.7);
@@ -509,7 +512,7 @@ body, html {
         background: url(../img/renyu-poster.png) no-repeat;
         background-size: 100% 100%;
         width: 9.6rem;
-        height: 7.8rem;
+        height: 60vh;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
         top: 11%

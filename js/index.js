@@ -8396,10 +8396,10 @@ this.createjs = this.createjs || {},
                     this.urlMap = {
                         1: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml",
                         2: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml"
-                    }, this.preloader(), 
+                    }, this.handleSafariCheck(),
+                    this.preloader(), 
                     this.checkCamera(), 
                     this.bindEvent(),
-                    this.handleSafariCheck(),
                     this.isAndroid && (this.resizeCallback = this.onResize.bind(this), 
                     window.addEventListener("resize", this.resizeCallback, !1))
                 }
@@ -8472,7 +8472,9 @@ this.createjs = this.createjs || {},
                 }, {
                     key: "handleSafariCheck",
                     value: function () {
-                        this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser")
+                        this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser");
+                        $("container").addClass("safariBottomOffset")
+
                     }
                 }, {
                     key: "bindEvent", // event that start displaying the camera feed
