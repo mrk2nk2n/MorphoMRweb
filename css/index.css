@@ -453,7 +453,7 @@ container.safariBottomOffset {
         background: url(../img/scan.gif) no-repeat;
         background-size: 100% 100%;
         width: 9.6rem;
-        height: 55vh;
+        height: 55%;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
         border-left: 15rem solid rgba(0,0,0,.7);

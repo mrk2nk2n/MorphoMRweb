@@ -8473,8 +8473,18 @@ this.createjs = this.createjs || {},
                 }, {
                     key: "handleSafariCheck",
                     value: function () {
-                        this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser");
+                        this.isSafari && this.isIphone ? this.resizeSafariBrowser() : alert ("this is not safari browser");
+                    }
+                }, {
+                    key: "resizeSafariBrowser",
+                    value: function () {
                         //document.getElementById("container").style.marginBottom = "10%";
+                        document.getElementById("scan-tip").style.top = "2%",
+                            document.getElementById("scan-top").style.height = "8%",
+                            document.getElementById("scan-boder").style.top = "8%",
+                            document.getElementById("scan-button").style.top = "66%",
+                            document.getElementById("renyu-poster").style.top = "8%",
+                            document.getElementById("more-button").style.top = "66%";
                         //////
                         //////
                         //////
