@@ -8397,6 +8397,7 @@ this.createjs = this.createjs || {},
                         1: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml",
                         2: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml"
                     }, this.handleSafariCheck(),
+                    this.getWindowSize(),
                     this.preloader(), 
                     this.checkCamera(), 
                     this.bindEvent(),
@@ -8477,6 +8478,13 @@ this.createjs = this.createjs || {},
 
                     }
                 }, {
+                    key: "getWindowSize",
+                    value: function () {
+                        var t = $(window).height(),
+                            n = $(window).width();
+                        alert("windowHeight: " + t + " windowWidth: " + n);
+                    }
+                }, {
                     key: "bindEvent", // event that start displaying the camera feed
                     value: function () {
                         var n = this;
@@ -8503,7 +8511,8 @@ this.createjs = this.createjs || {},
                             window.setTimeout(function () { // wait for two seconds                     
                                 n.posterPanel.hide(),
                                 n.myvideo[0].play(),
-                                n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
+                                n.app.getVideo().show(e, t), // return the video material into the height of the scanning border and offset from the top
+                                n.getWindowSize()
                             }, 1000)
 
                             window.setTimeout(function () { // wait for two seconds                     
