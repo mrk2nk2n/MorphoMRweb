@@ -8474,8 +8474,15 @@ this.createjs = this.createjs || {},
                     key: "handleSafariCheck",
                     value: function () {
                         this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser");
-                        $("container").addClass("safariBottomOffset")
-
+                        //document.getElementById("container").style.marginBottom = "10%";
+                        //////
+                        //////
+                        //////
+                        ///////
+                        //////
+                        //////
+                        //////
+                        ///////
                     }
                 }, {
                     key: "getWindowSize",
