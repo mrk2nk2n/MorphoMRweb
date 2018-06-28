@@ -342,11 +342,11 @@ body, html {
 .container {
     width: 100%;
     height: 93%;
-    margin-top: 7%
+    margin-bottom: 7%
 }
 
 .preload {
-    top: 7%;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
@@ -455,7 +455,7 @@ body, html {
         border-left: 15rem solid rgba(0,0,0,.7);
         border-right: 15rem solid rgba(0,0,0,.7);
         border-bottom: 10rem solid rgba(0,0,0,.7);
-        top: 23%
+        top: 11%
     }
 
     .scan-panel .scan-boder, .scan-panel .scan-tip {
@@ -470,14 +470,14 @@ body, html {
         background-size: 100% 100%;
         width: 4.24rem;
         height: .35rem;
-        top: 8%;
+        top: 7%;
         z-index: 11
     }
 
     .scan-panel .scan-top {
         position: absolute;
         width: 100%;
-        height: 23%;
+        height: 11%;
         background: rgba(0,0,0,.7)
     }
 
@@ -490,7 +490,7 @@ body, html {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         position: absolute;
-        top: 85%;
+        top: 78%;
         z-index: 110
     }
 
@@ -512,7 +512,7 @@ body, html {
         height: 7.8rem;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
-        top: 23%
+        top: 11%
     }
 
     .video-panel .renyu-poster {
@@ -531,7 +531,7 @@ body, html {
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         position: absolute;
-        top: 85%;
+        top: 78%;
         z-index: 1
     }
 
