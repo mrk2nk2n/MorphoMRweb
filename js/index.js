@@ -8371,7 +8371,6 @@ this.createjs = this.createjs || {},
                     this.webAR = new i.default,
                     this.preload = new createjs.LoadQueue(!1),
                     this.bodyElement = $("#body"),
-                    this.scrollPanel = $(".scrollPanel"),
                     this.startPanel = $(".openPanel"),
                     this.scanPanel = $(".scan-panel"),
                     this.posterPanel = $(".poster-panel"),
@@ -8399,7 +8398,8 @@ this.createjs = this.createjs || {},
                         2: "http://news.sina.com.cn/c/2012-05-28/010024488046.shtml"
                     }, this.preloader(), 
                     this.checkCamera(), 
-                    this.bindEvent(), 
+                    this.bindEvent(),
+                    this.handleSafariCheck(),
                     this.isAndroid && (this.resizeCallback = this.onResize.bind(this), 
                     window.addEventListener("resize", this.resizeCallback, !1))
                 }
@@ -8429,10 +8429,7 @@ this.createjs = this.createjs || {},
                         this.preload.on("complete", function () {
                             setTimeout(function () {
                                 e.hide() // hide preload bar on preloading complete
-                                n.show() // show main container that contains all the content   
-                                
-                                //$(".scroll").show()
-                                //$("html").addClass("scrollPage")
+                                n.show() // show main container that contains all the content        
                             }, 200)
                         }, this),                    
                         
@@ -8473,11 +8470,9 @@ this.createjs = this.createjs || {},
                         })
                     }
                 }, {
-                    key: "handleSafariScroll",
+                    key: "handleSafariCheck",
                     value: function () {
-                        this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser"),
-                        $(".scrollPanel").show(),
-                        $("html").addClass("scrollPanel")
+                        this.isSafari && this.isIphone ? alert("this is safari browser") : alert ("this is not safari browser")
                     }
                 }, {
                     key: "bindEvent", // event that start displaying the camera feed
@@ -8507,8 +8502,11 @@ this.createjs = this.createjs || {},
                                 n.posterPanel.hide(),
                                 n.myvideo[0].play(),
                                 n.app.getVideo().show(e, t) // return the video material into the height of the scanning border and offset from the top
-
                             }, 1000)
+
+                            window.setTimeout(function () { // wait for two seconds                     
+                                n.moreButton.show()
+                            }, 8000)
 
                         }), this.moreButton.on("click", function () {
                             n.videoPanel.hide(),
@@ -8540,8 +8538,7 @@ this.createjs = this.createjs || {},
                     value: function () {
                         $("#myvideo").html('<source src="resources/' + this.oid + '.mp4"/>'),
                         $(".intro .content").html('<img src="img/' + this.oid + '.jpg"/>'),
-                        $(".intro .introbutton").attr("href", this.urlMap[this.oid]),
-                        $(".scroll .scrollTip").html('<img src="img/scrollTipPNG.png"/>')
+                        $(".intro .introbutton").attr("href", this.urlMap[this.oid])
                     }
                 }, {
                     key: "fail",
@@ -8552,7 +8549,8 @@ this.createjs = this.createjs || {},
                 }, {
                     key: "scan", // to display video and hide scanning gif
                     value: function () {
-                        this.moreButton.show(),
+                        //this.moreButton.show(),
+                        this.moreButton.hide(),
                         this.scanPanel.hide(),
                         this.posterPanel.show(),
                         this.videoPanel.show(),
