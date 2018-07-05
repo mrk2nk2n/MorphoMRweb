@@ -8484,7 +8484,6 @@ this.createjs = this.createjs || {},
                             document.getElementById("scan-button").style.top = "66%",
                             document.getElementById("renyu-poster").style.top = "8%",
                             document.getElementById("more-button").style.top = "66%",
-                            document.getElementById("bg-audio-ogg").removeAttribute("src"),
                             document.getElementById("bg-audio-mp3").removeAttribute("src"),
                             document.ontouchmove = function (event) {
                                 event.preventDefault();
