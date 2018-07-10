@@ -407,7 +407,7 @@ container.safariBottomOffset {
 
 .open-camera {
     display: block;
-    background: url(../img/btn_ar.png) no-repeat;
+    background: url(http://www.magicast.xyz/webar/res/media/btn_ar.png) no-repeat;
     background-size: contain;
     width: 5.38rem;
     height: 1.5rem;
@@ -450,7 +450,7 @@ container.safariBottomOffset {
 }
 
     .scan-panel .scan-boder {
-        background: url(../img/scan.gif) no-repeat;
+        background: url(http://www.magicast.xyz/webar/res/media/scan.gif) no-repeat;
         background-size: 100% 100%;
         width: 40vw;
         height: 55%;
@@ -470,7 +470,7 @@ container.safariBottomOffset {
     }
 
     .scan-panel .scan-tip {
-        background: url(../img/text.png) no-repeat;
+        background: url(http://www.magicast.xyz/webar/res/media/text.png) no-repeat;
         background-size: 100% 100%;
         width: 4.24rem;
         height: .35rem;
@@ -486,7 +486,7 @@ container.safariBottomOffset {
     }
 
     .scan-panel .scan-button {
-        background: url(../img/btn_ready.png) no-repeat;
+        background: url(http://www.magicast.xyz/webar/res/media/btn_ready.png) no-repeat;
         background-size: 100% 100%;
         width: 6.79rem;
         height: 1.2rem;
@@ -510,7 +510,7 @@ container.safariBottomOffset {
 }
 
     .video-panel .renyu-poster {
-        background: url(../img/renyu-poster.png) no-repeat;
+        background: url(http://www.magicast.xyz/webar/res/media/renyu-poster.png) no-repeat;
         background-size: 100% 100%;
         width: 9.0rem;
         height: 55vh;
@@ -527,7 +527,7 @@ container.safariBottomOffset {
     }
 
     .video-panel .more-button {
-        background: url(../img/btn_more.png) no-repeat;
+        background: url(http://www.magicast.xyz/webar/res/media/btn_more.png) no-repeat;
         background-size: 100% 100%;
         width: 6.79rem;
         height: 1.2rem;
@@ -560,7 +560,7 @@ container.safariBottomOffset {
     .f-rbutton a {
         width: 20%;
         height: 70%;
-        background: url(../img/btn_back.png) no-repeat;
+        background: url(http://www.magicast.xyz/webar/res/media/btn_back.png) no-repeat;
         background-size: contain;
         margin: auto;
         margin-top: 3vh
