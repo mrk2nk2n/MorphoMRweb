@@ -251,7 +251,7 @@ canvas {
 .lock-bg {
     width: 8.02rem;
     height: 8.38rem;
-    background: url(https://www.magicast.xyz/webar/res/media/lock.png) 0 0 no-repeat;
+    background: url(https://150.109.61.63/webar/res/media/lock.png) 0 0 no-repeat;
     background-size: contain
 }
 
@@ -414,7 +414,7 @@ contentBox.safariBottomOffset {
 
 .bStartAR {
     display: block;
-    background: url(https://www.magicast.xyz/webar/res/media/btn_ar.png) no-repeat;
+    background: url(https://150.109.61.63/webar/res/media/btn_ar.png) no-repeat;
     background-size: contain;
     width: 5.38rem;
     height: 1.5rem;
@@ -427,7 +427,7 @@ contentBox.safariBottomOffset {
 }
 
 .ioswxPanel {
-    background: url(https://www.magicast.xyz/webar/res/media/01.jpg) no-repeat #fff center 30%;
+    background: url(https://150.109.61.63/webar/res/media/01.jpg) no-repeat #fff center 30%;
     background-size: 7.5rem 9.87rem;
     left: 0;
     z-index: 200;
@@ -457,7 +457,7 @@ contentBox.safariBottomOffset {
 }
 
     .pScanning .scanBody {
-        background: url(https://www.magicast.xyz/webar/res/media/scan.gif) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/scan.gif) no-repeat;
         background-size: 100% 100%;
         width: 40vw;
         height: 55%;
@@ -477,7 +477,7 @@ contentBox.safariBottomOffset {
     }
 
     .pScanning .scanTip {
-        background: url(https://www.magicast.xyz/webar/res/media/text.png) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/text.png) no-repeat;
         background-size: 100% 100%;
         width: 4.24rem;
         height: .35rem;
@@ -493,7 +493,7 @@ contentBox.safariBottomOffset {
     }
 
     .pScanning .bReady {
-        background: url(https://www.magicast.xyz/webar/res/media/btn_ready.png) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/btn_ready.png) no-repeat;
         background-size: 100% 100%;
         width: 6.79rem;
         height: 1.2rem;
@@ -517,7 +517,7 @@ contentBox.safariBottomOffset {
 }
 
     .pDisplay .posterPic {
-        background: url(https://www.magicast.xyz/webar/res/media/renyu-poster.png) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/renyu-poster.png) no-repeat;
         background-size: 100% 100%;
         width: 9.0rem;
         height: 55vh;
@@ -534,7 +534,7 @@ contentBox.safariBottomOffset {
     }
 
     .pDisplay .bMore {
-        background: url(https://www.magicast.xyz/webar/res/media/btn_more.png) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/btn_more.png) no-repeat;
         background-size: 100% 100%;
         width: 6.79rem;
         height: 1.2rem;
@@ -567,7 +567,7 @@ contentBox.safariBottomOffset {
     .bIntroBox a {
         width: 20%;
         height: 70%;
-        background: url(https://www.magicast.xyz/webar/res/media/btn_back.png) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/btn_back.png) no-repeat;
         background-size: contain;
         margin: auto;
         margin-top: 3vh
@@ -634,13 +634,13 @@ contentBox.safariBottomOffset {
     top: 40%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url(https://www.magicast.xyz/webar/res/media/progress.png) no-repeat 50%;
+    background: url(https://150.109.61.63/webar/res/media/progress.png) no-repeat 50%;
     background-size: 5.41rem .07rem
 }
 
     .progress .progressBar {
         width: 0;
         height: 1.54rem;
-        background: url(https://www.magicast.xyz/webar/res/media/progress1.png) no-repeat;
+        background: url(https://150.109.61.63/webar/res/media/progress1.png) no-repeat;
         background-size: 100% 100%
     }
